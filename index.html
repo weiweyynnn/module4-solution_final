@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A fully working JavaScript greetings assignment for Module 4.">
+  <title>Module 4 | The Greeting Lab</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Keep the original starter library order. -->
+  <script src="SpeakHello.js"></script>
+  <script src="SpeakGoodBye.js"></script>
+  <script src="script.js"></script>
+  <script src="js/ui.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Greeting Lab home"><span class="brand-symbol" aria-hidden="true">{ }</span><span>the greeting lab<span class="brand-period">.</span></span></a>
+    <span class="module-tag"><span class="status-dot" aria-hidden="true"></span> MODULE 04 &nbsp;·&nbsp; JAVASCRIPT</span>
+  </header>
+  <main id="home" class="shell">
+    <section class="intro" aria-labelledby="headline">
+      <div class="eyebrow"><span class="eyebrow-line"></span> HANDS-ON CODING EXERCISE</div>
+      <h1 id="headline">A little hello.<br><em>A clever goodbye.</em></h1>
+      <p class="lead">A small JavaScript experiment with a simple rule: names beginning with <code>J</code> or <code>j</code> get a goodbye. Everyone else gets a hello.</p>
+      <div class="intro-note"><span aria-hidden="true">✦</span> Runs automatically in your browser console when the page loads</div>
+    </section>
+
+    <section class="workspace" aria-label="Interactive greeting demo">
+      <div class="console-card">
+        <div class="console-topbar">
+          <div class="traffic" aria-hidden="true"><span></span><span></span><span></span></div>
+          <span class="console-title">console / output</span>
+          <span class="console-live"><span></span> LIVE</span>
+        </div>
+        <div class="console-body">
+          <div class="console-command"><span class="terminal-prompt">➜</span><span> node <strong>script.js</strong></span></div>
+          <div class="console-divider">// generated output <span>↴</span></div>
+          <ol id="greeting-output" class="console-lines" aria-label="Printed JavaScript greetings" aria-live="polite"></ol>
+          <div class="console-cursor" aria-hidden="true"><span>_</span></div>
+        </div>
+        <div class="console-footer"><span>●</span> JavaScript executed successfully <span id="log-count">10 lines</span></div>
+      </div>
+
+      <aside class="side-panel" aria-label="Demo controls and explanation">
+        <div class="panel-heading"><span class="kicker">01 / THE RULE</span><h2>One little condition.</h2></div>
+        <div class="logic-card"><span class="logic-label">IF FIRST LETTER === 'j'</span><strong><span class="logic-symbol gold">↗</span> Good Bye</strong><span class="logic-separator"></span><span class="logic-label">ELSE</span><strong><span class="logic-symbol green">↗</span> Hello</strong></div>
+        <div class="try-panel">
+          <div class="panel-heading"><span class="kicker">02 / TRY IT YOURSELF</span><h2>Give it a name.</h2></div>
+          <form id="try-form" autocomplete="off">
+            <label for="name-input">Type a name</label>
+            <div class="input-row"><input id="name-input" name="name" type="text" minlength="1" maxlength="40" placeholder="e.g. Jasmine" required><button type="submit">Say hello <span aria-hidden="true">↗</span></button></div>
+            <p id="form-message" class="form-hint" aria-live="polite">Try names starting with J and other letters.</p>
+          </form>
+        </div>
+        <button id="reset-button" class="reset-button" type="button"><span aria-hidden="true">↻</span> Run the original 10 names again</button>
+      </aside>
+    </section>
+
+    <section class="summary" aria-labelledby="summary-title">
+      <div><span class="kicker">THE RESULTS</span><h2 id="summary-title">See the logic at work.</h2><p>Each name is checked, then printed using its own speaker object.</p></div>
+      <div class="stats"><div><strong id="stat-total">10</strong><span>Names processed</span></div><div><strong id="stat-hello">6</strong><span>Hellos sent</span></div><div><strong id="stat-goodbye">4</strong><span>Goodbyes sent</span></div></div>
+    </section>
+    <footer><span>MODULE 4 · JAVASCRIPT FUNDAMENTALS</span><span>Built with functions, IIFEs, objects &amp; loops.</span></footer>
+  </main>
+</body>
+</html>
